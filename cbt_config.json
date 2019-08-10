@@ -5,7 +5,7 @@
   },
   
   "webdriver": {
-    "name": "Python Web UI Testing Webinar",
+    "name": "Hands-On UI Testing with Python",
     "build": "1.0",
     "browserName": "Chrome",
     "version": "75x64",
