@@ -1,0 +1,15 @@
+{
+  "authentication": {
+    "username": "",
+    "key": ""
+  },
+  
+  "webdriver": {
+    "name": "Python Web UI Testing Webinar",
+    "build": "1.0",
+    "browserName": "Chrome",
+    "version": "75x64",
+    "platform": "Windows 10",
+    "screenResolution": "1366x768"
+  }
+}
