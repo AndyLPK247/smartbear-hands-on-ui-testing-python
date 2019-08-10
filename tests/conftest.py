@@ -62,7 +62,7 @@ def browser(cbt_config, request):
 
 
 # ----------------------------------------------------------------------
-# Hook + Fixture: Report the test result to CrossBrowserTesting
+# Hook + Fixture: Upload extra info to CrossBrowserTesting
 # ----------------------------------------------------------------------
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
@@ -74,23 +74,31 @@ def pytest_runtest_makereport(item, call):
 
 
 @pytest.fixture
-def result_uploader(cbt_config, browser, request):
-  
-  # Let the test run
-  yield
-
-  # Determine the score
-  score = 'fail' if request.node.test_result.failed else 'pass'
+def cbt_uploader(cbt_config, browser, request):
+  URL = 'https://crossbrowsertesting.com/api/v3'
 
   # Get config data
   username = cbt_config['authentication']['username']
   key = cbt_config['authentication']['key']
 
-  # Create the result uploader
+  # Create the uploader
   uploader = requests.Session()
   uploader.auth = (username, key)
+
+  # Start recording the video
+  response = uploader.post(f'{URL}/selenium/{browser.session_id}/videos')
+  video_hash = response.json()['hash']
   
+  # Let the test run
+  yield
+
+  # Stop recording the video
+  uploader.delete(f'{URL}/selenium/{browser.session_id}/videos/{video_hash}')
+  
+  # Determine the score
+  score = 'fail' if request.node.test_result.failed else 'pass'
+
   # Post the test result
   uploader.put(
-    f'https://crossbrowsertesting.com/api/v3/selenium/{browser.session_id}',
+    f'{URL}/selenium/{browser.session_id}',
     data={'action': 'set_score', 'score': score})
