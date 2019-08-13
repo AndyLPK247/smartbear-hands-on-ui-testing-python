@@ -28,9 +28,7 @@ You can also check results on the CrossBrowserTesting website.
 ## Additional Resources
 
 * [Automation Panda](https://www.automationpanda.com/) blog
-* Python Web UI Testing Tutorials
-  * [Hands-On Web UI Testing](https://github.com/AndyLPK247/pyohio-2019-web-ui-testing) at PyOhio 2019
-  * [Web	Testing Made Easy with Python, Pytest and Selenium WebDriver](https://blog.testproject.io/2019/07/16/open-source-test-automation-python-pytest-selenium-webdriver/) on the TestProject blog
+* [Hands-On Web UI Testing](https://github.com/AndyLPK247/pyohio-2019-web-ui-testing) PyOhio 2019 tutorial
 * [Test Automation University](https://testautomationu.applitools.com/) courses
   * [Web Element Locator Strategies](https://testautomationu.applitools.com/web-element-locator-strategies/)
   * [Behavior Driven Python with pytest-bdd](https://testautomationu.applitools.com/behavior-driven-python-with-pytest-bdd/)
