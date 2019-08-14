@@ -3,6 +3,7 @@ This repository contains the example test project
 for the **Hands-On Web UI Testing with Python** webinar
 delivered by *SmartBear* in collaboration with *Automation Panda*
 on August 14, 2019.
+The webinar slides are saved in this repository as `webinar-slides.pdf`.
 
 ## Setup
 This project requires Python 3.
@@ -27,6 +28,7 @@ You can also check results on the CrossBrowserTesting website.
 
 ## Additional Resources
 
+* [CrossBrowserTesting](https://crossbrowsertesting.com/) website
 * [Automation Panda](https://www.automationpanda.com/) blog
 * [Hands-On Web UI Testing](https://github.com/AndyLPK247/pyohio-2019-web-ui-testing) PyOhio 2019 tutorial
 * [Test Automation University](https://testautomationu.applitools.com/) courses
