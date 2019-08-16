@@ -26,6 +26,18 @@ The terminal will print the pytest banner.
 Be patient - tests may take a few seconds to complete.
 You can also check results on the CrossBrowserTesting website.
 
+## Writing New Tests
+This project can be the starting point for more testing.
+Try writing new tests on your own!
+Here are some ideas for additional DuckDuckGo tests:
+
+* use different search phrases
+* click a search result
+* do an image search
+* do a video search
+
+You can also try to write tests for other Web apps!
+
 ## Additional Resources
 
 * [CrossBrowserTesting](https://crossbrowsertesting.com/) website
