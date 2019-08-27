@@ -1,6 +1,7 @@
 """
 This module contains DuckDuckGoResultPage,
 the page object for the DuckDuckGo search result page.
+Warning: the SEARCH_INPUT locator had to be updated because the page changed!
 """
 
 from selenium.webdriver.common.by import By
@@ -10,7 +11,7 @@ class DuckDuckGoResultPage:
   
   # Locators
 
-  SEARCH_INPUT = (By.NAME, 'q')
+  SEARCH_INPUT = (By.ID, 'search_form_input')
 
   @classmethod
   def PHRASE_RESULTS(cls, phrase):
